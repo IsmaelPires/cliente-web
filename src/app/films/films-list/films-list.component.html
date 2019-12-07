@@ -1,13 +1,8 @@
-<div>
-    Exemplo de carregamento da lista de filmes
-    <ul>
-      <li *ngFor="let film of films">
-        {{film.title}}<br>
-        {{film.episode_id}}<br>
-        {{film.opening_crawl}}<br>
-        {{film.director}}<br>
-        {{film.producer}}<br>
-        {{film.release_date}}<br>
-      </li>
-    </ul>
+  <div class="card" style="width: 18rem;" *ngFor="let film of films">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{film.title}}</h5>
+      <p class="card-text">{{film.opening_crawl}}</p>
+      <a href="#" class="btn btn-primary">Detalhes</a>
+    </div>
   </div>
