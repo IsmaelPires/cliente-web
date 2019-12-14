@@ -6,14 +6,30 @@ import { GenericModule } from '../generic/generic.module';
 import { FilmsListComponent } from './films-list/films-list.component';
 import {NgbModule, NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+​
 import { FilmsDetailComponent } from './films-detail/films-detail.component';
+​
+const routes: Routes = [
+  { path: 'films/:id',  component: FilmsDetailComponent },
+  {
+    path: 'films',
+    component: FilmsListComponent, data: { title: 'Heroes List' }
+  }
+];
+​
 ​
 @NgModule({
   declarations: [FilmsListComponent, FilmsDetailComponent],
   imports: [
-    CommonModule, GenericModule, HttpClientModule, BrowserModule, NgbModule
+    CommonModule,
+    GenericModule,
+    HttpClientModule, 
+    BrowserModule, 
+    NgbModule,
+    RouterModule.forRoot(routes, { enableTracing: true })
   ],
-  exports: [FilmsListComponent]
+  exports: [FilmsListComponent,FilmsDetailComponent]
   //bootstrap: [FilmsListComponent]
 })
 export class FilmsModule { }
