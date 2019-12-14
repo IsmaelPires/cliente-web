@@ -13,7 +13,12 @@ const routes: Routes = [
   {
     path: 'films',
     loadChildren: './films/films.module#FilmsModule'
-  }]
+  },
+  {
+    path: 'people',
+    loadChildren: './people/people.module#PeopleModule'
+  }
+]
 
 @NgModule({
   declarations: [
