@@ -1,8 +1,16 @@
-  <div class="card" id="cards" style="width: 18rem;" *ngFor="let film of films">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{film.title}}</h5>
-      <p class="card-text">{{film.opening_crawl}}</p>
-      <a href="#" class="btn btn-primary">Detalhes</a>
+<div class="row">
+  <div class="col-sm-6" *ngFor="let film of films">
+    <div class="card-group">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../../../assets/img/background-default.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{film.title}}</h5>
+          <p class="card-text">{{film.opening_crawl}}</p>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalDetalhesFilmes">Detalhes</a>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+<app-films-detail></app-films-detail>

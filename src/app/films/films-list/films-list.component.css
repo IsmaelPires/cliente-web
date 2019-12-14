@@ -1,3 +1,4 @@
-#cards {
-    position: relative;
+.card {
+    border-radius:20;
+    margin: 20px 20px 20px 20px;
 }
