@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'films/:id',  component: FilmsDetailComponent },
   {
     path: 'films',
-    component: FilmsListComponent, data: { title: 'Heroes List' }
+    component: FilmsListComponent
   }
 ];
 ​
@@ -28,7 +28,9 @@ const routes: Routes = [
     NgbModule,
     RouterModule.forRoot(routes, { enableTracing: true })
   ],
-  exports: [FilmsListComponent,FilmsDetailComponent]
+  exports: [
+    FilmsListComponent,
+    FilmsDetailComponent]
   //bootstrap: [FilmsListComponent]
 })
 export class FilmsModule { }
